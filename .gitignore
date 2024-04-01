@@ -23,4 +23,10 @@
 hs_err_pid*
 
 # IDE´s files
-.ideia
+.idea
+.DS_Store
+*.iml
+
+# Builds
+target
+
