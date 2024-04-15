@@ -8,7 +8,8 @@ import java.util.Map;
 
 public class GsonDeserializer<T> implements Deserializer<T> {
 
-    public static final String TYPE_CONFIG = "br.com.alura.ecommerse.type_config";
+    public static final String TYPE_CONFIG = "br.com.alura.ecommerce.type_config";
+
     private final Gson gson = new GsonBuilder().create();
     private Class<T> type;
 
@@ -18,7 +19,7 @@ public class GsonDeserializer<T> implements Deserializer<T> {
         try {
             this.type = (Class<T>) Class.forName(typeName);
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Type for deserialization does not exist in the classpath.", e);
+            throw new RuntimeException("Type for deserialization does not exist in the classpath." ,e);
         }
     }
 
